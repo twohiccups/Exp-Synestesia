@@ -1,21 +1,30 @@
+
 button.off {
+    width: 30;
+    height: 30;
   margin-top: 20px;
   line-height: 60px;
   font-weight: bold;
-  padding: 0 40px;
+  padding: 0 30px;
   background: salmon;
   border: none;
 }
 
 button.on {
+    width: 30;
+    height: 30;
   margin-top: 20px;
   line-height: 60px;
   font-weight: bold;
-  padding: 0 40px;
+  padding: 0 30px;
   background: skyblue;
   border: none;
 }
 
 button:hover {
   background: lightgreen;
+}
+
+#ratio-slider {
+    width: 80%;
 }
