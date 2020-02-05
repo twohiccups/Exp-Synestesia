@@ -1,3 +1,7 @@
+/*--------------------------------------------------------------
+The view for hex keyboard.
+--------------------------------------------------------------*/ 
+
 const width = 1000;
 const height = 800;
 var s = Snap(width, height);
@@ -100,9 +104,6 @@ function drawGrid(colSize, totalNotes, startX, startY, r) {
         const adjustEvenRows = numColomn % 2 == 0 ? r : 0
         const mod = j % colSize;
         const adjustY = mod * 2 * r + adjustEvenRows;
-
-        console.log(startX + adjustX)
-        console.log(startX + startY + adjustY)
 
         var hex = new Hex(startX + adjustX, startY + adjustY, r);
         hex.hex.node.hexId = j;

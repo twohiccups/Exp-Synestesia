@@ -1,5 +1,4 @@
-
-button.off {
+.interval-button.off {
     width: 30;
     height: 30;
   margin-top: 20px;
@@ -10,7 +9,7 @@ button.off {
   border: none;
 }
 
-button.on {
+.interval-button.on {
     width: 30;
     height: 30;
   margin-top: 20px;
@@ -21,10 +20,14 @@ button.on {
   border: none;
 }
 
-button:hover {
+.interval-button:hover {
   background: lightgreen;
 }
 
-#ratio-slider {
+#enable-keyboard40-button {
+    padding: 20px;
+}
+
+.slider {
     width: 80%;
 }

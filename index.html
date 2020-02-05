@@ -13,9 +13,14 @@
 </head>
 
 <body>
+    <button id="enable-keyboard40-button">Enable 40 Keys</button>
+    <br>
+    <input type="range" id="basenote-slider" class="slider" name="cowbell" min="100" max="300" value="200" step="0.01">
+    <input id="basenote-input" type="num" placeholder="basenote frequency (hz)">
+    <br>
 
     
-    <input type="range" id="ratio-slider" name="cowbell" min="1" max="1.2" value="90" step="0.00001">
+    <input type="range" id="ratio-slider" class="slider" name="cowbell" min="1" max="1.2" step="0.00001">
     <input id="ratio-input" type="num" placeholder="semitone ratio">
     <br>
     
@@ -28,7 +33,9 @@
         <script src="sound.js"></script>
         <script src="musicInteralButtons.js"></script>
         <script src="ratioSlider.js"></script>
+        <script src="basenoteSlider.js"></script>
         <script src="main.js"></script>
+        <script src="keyboard40.js"></script>
         <script src="buttonController.js"></script>
 </body>
             

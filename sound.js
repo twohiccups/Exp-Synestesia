@@ -1,5 +1,9 @@
-const notes = 108;
-const minFreq = 200;
+/*--------------------------------------------------------------
+Uses tone.js library to create the scale, assign frequencies to notes, and create sound.
+--------------------------------------------------------------*/ 
+
+const notes = 40;
+var baseFrequency = 200;
 const maxDistanceHZ = 500;
 const compressionLevel = 15;
 const noteLength = '16n'
@@ -13,13 +17,13 @@ synth.connect(comp)
 comp.toMaster();
 var noteFrequencies;
 
-genererateFrequencies(notes, minFreq, ratio)
+genererateFrequencies(notes, baseFrequency, ratio);
 
-function genererateFrequencies(notes, minFreq, step) {
+function genererateFrequencies(notes, baseFrequency, step) {
     noteFrequencies = [];
-    noteFrequencies.push(minFreq);
-    for (i = 1; i < notes; i++) {
-        noteFrequencies.push(noteFrequencies[i - 1] * step)
+    noteFrequencies.push(baseFrequency);
+    for (i = 0; i < notes; i++) {
+        noteFrequencies.push(noteFrequencies[i] * step)
     }
 
 }
