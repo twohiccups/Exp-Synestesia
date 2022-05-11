@@ -2,14 +2,12 @@
 Uses tone.js library to create the scale, assign frequencies to notes, and create sound.
 --------------------------------------------------------------*/ 
 
-const notes = 40;
 var baseFrequency = 200;
 const maxDistanceHZ = 500;
 const compressionLevel = 15;
 const noteLength = '16n'
-//const ratio = 1.025665;
-//var ratio = 1.09665;
-var ratio = 1.09665;
+const ratio = 1.005665;
+// var ratio = 1.09665;
 
 var comp = new Tone.Compressor(-30, compressionLevel);
 var synth = new Tone.PolySynth(16, Tone.Synth)

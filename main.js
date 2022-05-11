@@ -2,7 +2,6 @@
 Main file, creates keyboard and sets click events.
 --------------------------------------------------------------*/ 
 
-const columns = 4;
 var clicked = false;
 
 //var path = "M 100 200 C 500 200 600 300 700 200 C 800 100 900 100 900 100";
@@ -14,7 +13,7 @@ var clicked = false;
 
 
 
-var hexGrid = drawGrid(columns, notes, 30, 400, 25);
+var hexGrid = drawGrid(notes);
 
 var chordSet = new Set();
 

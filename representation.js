@@ -2,15 +2,36 @@
 The view for hex keyboard.
 --------------------------------------------------------------*/ 
 
-const width = 1000;
-const height = 800;
-var s = Snap(width, height);
+var sets = [
+['notes', 'rows', 'factor'],
+[336, 12, 0.33],
+[152, 8, 0.5], 
+[84, 6, 0.7],
+[40, 4, 1]
+];
+
+var notes = 336;
+const factor = 0.33;
+const rows = 12;
+
+const width = 500;
+const height = 300;
+const startX = 10;
+const startY = 10;
+
+const strokeWidth = 5 * factor;
+var rotationAngle = 60;
+
+var radius = 25 * factor;
+
+
+
+var s = Snap('#svgcanvas');
+
 s.attr({
-    id: "svgcanvas"
+    preserveAspectRatio: 'xMaxYMax',
+    viewBox: `0 0 ${width} ${height}`,
 });
-const strokeWidth = 5;
-const radius = 30
-var rotationAngle = 19;
 
 var background = s.rect(0, 0, width, height);
 background.attr({
@@ -73,8 +94,8 @@ class Hex {
         return s.polyline(points);
     }
 
-    rotate(angle) {
-        this.matrix.rotate(angle, this.x, this.y);
+    rotate() {
+        this.matrix.rotate(rotationAngle, this.x, this.y);
         this.group.transform(this.matrix);
     }
 
@@ -93,22 +114,22 @@ function drawBoxBounds(r) {
 }
 
 
-function drawGrid(colSize, totalNotes, startX, startY, r) {
+function drawGrid(totalNotes) {
     var grid = []
 
     for (j = 0; j < totalNotes; j++) {
 
-        const numColomn = Math.floor(j / colSize)
-        const adjustX = 2 * r * numColomn
+        const numColomn = Math.floor(j / rows)
+        const adjustX = 2 * radius * numColomn
 
-        const adjustEvenRows = numColomn % 2 == 0 ? r : 0
-        const mod = j % colSize;
-        const adjustY = mod * 2 * r + adjustEvenRows;
+        const adjustEvenRows = numColomn % 2 == 0 ? radius : 0
+        const mod = j % rows;
+        const adjustY = mod * 2 * radius + adjustEvenRows;
 
-        var hex = new Hex(startX + adjustX, startY + adjustY, r);
+        var hex = new Hex(startX + adjustX, startY + adjustY, radius);
         hex.hex.node.hexId = j;
         
-        color = Snap.hsb(j / totalNotes, 1 - mod * 0.5 / colSize, 0.9)
+        color = Snap.hsb(j / totalNotes, 1 - mod * 0.5 / rows, 0.9)
         hex.colorHexagon(color);
         grid.push(hex);
     }

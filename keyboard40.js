@@ -2,7 +2,7 @@
 Assigns playNote() to keyboard events. Designed for 40 note keyboard.
 --------------------------------------------------------------*/
 
-var enableKeyboard40 = false;
+var enableKeyboard40 = true;
 
 var keyToNoteAssignment = {
     "Digit1": 0,
