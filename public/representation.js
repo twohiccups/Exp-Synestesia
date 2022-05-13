@@ -15,7 +15,7 @@ var rows;
 var radius;
 var startPoint;
 
-setSynthSize(0)
+setSynthSize(0);
 
 const width = 410;
 const height = 300;
