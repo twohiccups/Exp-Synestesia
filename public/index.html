@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="libs/tone.js"></script>
+    <script src="libs/snap.svg-min.js"></script>
+
+</head>
+
+<body>
+
+    <!--     <div class="controls">
+        <button id="enable-keyboard40-button">Enable 40 Keys</button>
+        <br>
+        <input type="range" id="basenote-slider" class="slider" name="cowbell" min="100" max="300" value="200" step="0.01">
+        <input id="basenote-input" type="num" placeholder="basenote frequency (hz)">
+        <br>
+
+    
+        <input type="range" id="ratio-slider" class="slider" name="cowbell" min="1" max="1.2" step="0.00001">
+        <input id="ratio-input" type="num" placeholder="semitone ratio" list="interval-tickmarks">
+        <datalist id="interval-tickmarks">
+          <option value="1"></option>
+        </datalist>
+        <br>
+    </div> -->
+
+    <div class="main-container">
+        <div class="controls">
+            <div class="control">wtf</div>
+
+            <div class="control">size
+                <div class="size-control" size="0">0</div>
+                <div class="size-control" size="1">1</div>
+                <div class="size-control" size="2">2</div>
+                <div class="size-control" size="3">3</div>
+            </div>
+
+            <div class="control">
+                <div>tuning</div>
+
+                <label>cents</label>
+                <input id="cents" type="number">
+
+                <label>ratio</label>
+                <input id="ratio" type="number">
+
+                <label>edo</label>
+                <input id="edo" type="number">
+            </div>
+
+            <!-- <div class="control">theme</div> -->
+        </div>
+        <div class="svg-container">
+            <svg id="svgcanvas"></svg>
+        </div>
+    </div>
+
+
+
+
+    <!-- <div id="intervalButtonsDiv"></div> -->
+
+
+
+    <script src="representation.js"></script>
+    <script src="sound.js"></script>
+    <script src="musicInteralButtons.js"></script>
+    <script src="ratioSlider.js"></script>
+    <script src="basenoteSlider.js"></script>
+    <script src="main.js"></script>
+    <script src="keyboard40.js"></script>
+    <script src="buttonController.js"></script>
+</body>
+
+</html>
